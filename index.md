@@ -2,7 +2,7 @@
 title: Welcome to my blog
 ---
 
-My name is Zheyang (Sam) Zheng. I'm a currently PhD student in computational neuroscience at New York University. I obtained my Bachelor in Mathematics (minor: Philosophy) at the University of Chicago in 2018. I work closely with experimentalists to develop statistical tools to help understand the brain, with a special interest in the hippocampus. 
+My name is Zheyang (Sam) Zheng. I'm a PhD student in computational neuroscience at New York University. I obtained my Bachelor in Mathematics (minor: Philosophy) at the University of Chicago in 2018. I work closely with experimentalists to develop statistical tools to help understand the brain, with a special interest in the hippocampus. 
 
 Outside of research, I enjoy learning math, jazz piano and arranging, muay thai, weightlifting, anime and reflecting on the interconnections between math, neuroscience, philosophy and life.   
 
