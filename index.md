@@ -6,7 +6,7 @@ My name is Zheyang (Sam) Zheng. I'm a currently PhD student in computational neu
 
 Outside of research, I enjoy learning math, jazz piano and arranging, muay thai, weightlifting, anime and reflecting on the interconnections between math, neuroscience, philosophy and life.   
 
-I was deeply drawn to the philosophy of [Zhuang Zi](https://hackettpublishing.com/zhuangziphil) and [Tiantai Buddhism] (https://plato.stanford.edu/entries/buddhism-tiantai/) (as introduced by my professor [Brook Ziporyn](https://divinity.uchicago.edu/directory/brook-ziporyn)).  
+I was deeply drawn to the philosophy of [Zhuang Zi](https://hackettpublishing.com/zhuangziphil) and [Tiantai Buddhism](https://plato.stanford.edu/entries/buddhism-tiantai/) (as introduced by my professor [Brook Ziporyn](https://divinity.uchicago.edu/directory/brook-ziporyn)).  
 
 I am an avid practitioner of meditation. I was lucky to have attended the [Vipassana meditation retreat](https://www.dhamma.org/en-US/courses/search), which not only gave me the tool to deal with mental inertia and appreciate the present, but also lit up the path from philosophy to neuroscience for me.
 
