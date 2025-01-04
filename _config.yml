@@ -1,4 +1,22 @@
-# theme: minima
 remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+title: "Sam's Blog"
+description: "Thoughts on Philosophy, Neuroscience, and Math"
+author:
+  name: "Zheyang (Sam) Zheng"
+  email: "samzhenguchi@gmail.com"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+
+# Optional but recommended
+paginate: 5
