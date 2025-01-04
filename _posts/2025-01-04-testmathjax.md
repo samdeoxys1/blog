@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "test math jax"
 date: 2025-01-04
 ---
