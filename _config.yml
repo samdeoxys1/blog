@@ -26,11 +26,7 @@ kramdown:
       - '$$'
       - '$$'
 
-# defaults:
-#   - scope:
-#       path: "_posts"
-#     values:
-#       layout: "posts"
+
 
 defaults:
   - scope:
@@ -41,5 +37,5 @@ defaults:
 
 
 
-# Optional but recommended
-paginate: 5
+# # Optional but recommended
+# paginate: 5
