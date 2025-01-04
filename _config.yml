@@ -17,18 +17,21 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 
+# defaults:
+#   - scope:
+#       path: "_posts"
+#     values:
+#       layout: "posts"
+
 defaults:
   - scope:
       path: "_posts"
+      type: "posts"
     values:
-      layout: "posts"
+      layout: "single"
 
-# defaults:
-#   - scope:
-#       path: ""
-#       type: "posts"
-#     values:
-#       layout: "single"
+minimal_mistakes_skin: "mathjax"
+
 
 # Optional but recommended
 paginate: 5
