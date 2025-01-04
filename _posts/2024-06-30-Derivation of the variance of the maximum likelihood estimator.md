@@ -9,7 +9,7 @@ categories: mathematical details
 
 While reading papers about Fisher information, I came across this basic relationship between the Fisher information and the variance of the maximum likelihood estimator (for large sample size), which I found amazing:
 
-$var[\hat\theta]=\mathbb E[(\hat\theta-\theta)^2]=1/(NI(\theta)),$
+$$var[\hat\theta]=\mathbb E[(\hat\theta-\theta)^2]=1/(NI(\theta)),$$
 
 where $\theta$ is the true parameter in the generative model, and the $\hat \theta$ is the maximum likelihood estimator, the Fisher information $I(w)=\mathbb E[-\frac{\partial^2 \log p(x|w)}{\partial w^2}]$, and $N$ is the sample size. (using $w$ here for a generic input, to not be confused with the true parameter)
 
