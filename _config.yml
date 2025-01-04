@@ -16,6 +16,15 @@ markdown: kramdown
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+  input: GFM
+  # Optional, but these lines enable $$ delimiters:
+  math_engine_opts:
+    inlinemath_delimiters: 
+      - '$'
+      - '$'
+    displaymath_delimiters:
+      - '$$'
+      - '$$'
 
 # defaults:
 #   - scope:
@@ -30,7 +39,6 @@ defaults:
     values:
       layout: "single"
 
-minimal_mistakes_skin: "mathjax"
 
 
 # Optional but recommended
