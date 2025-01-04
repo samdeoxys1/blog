@@ -12,6 +12,12 @@ author:
   name: "Zheyang (Sam) Zheng"
   email: "samzhenguchi@gmail.com"
 
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+
 defaults:
   - scope:
       path: ""
