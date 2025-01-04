@@ -1,6 +1,8 @@
 ---
+layout: post
 title: "Derivation of the variance of the maximum likelihood estimator"
 date: 2024-06-30
+categories: mathematical details
 ---
 
 # Intro
