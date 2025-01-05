@@ -11,7 +11,7 @@ While reading papers about Fisher information, I came across this basic relation
 
 $$var[\hat\theta]=\mathbb E[(\hat\theta-\theta)^2]=1/(NI(\theta)),$$
 
-where $$\theta$$ is the true parameter in the generative model, and the $$\hat \theta$$ is the maximum likelihood estimator, the Fisher information $$I(w)=\mathbb E[-\frac{\partial^2 \log p(x|w)}{\partial w^2}]$$, and $$N$$ is the sample size. (using $$w$$ here for a generic input, to not be confused with the true parameter)
+where $$\theta$$ is the true parameter in the generative model, and the $$\hat \theta$$ is the maximum likelihood estimator, the Fisher information $$I(w)=\mathbb E[-\frac{\partial^2 \log p(x\vert w)}{\partial w^2}]$$, and $$N$$ is the sample size. (using $$w$$ here for a generic input, to not be confused with the true parameter)
 
 This relationship is really interesting because the fisher information involves the (derivatives of the) log likelihood function and not the estimator itself, and thus a priori from the definition it is not intuitive to see this relationship.  
 
@@ -19,9 +19,9 @@ The following snippet will simply provide a derivation as I would do it, then th
 
 # Derivation (with caveats)
 
-Assuming the samples $$\{x^i\}_i\sim p(x|\theta)$$ are i.i.d. 
+Assuming the samples $$\{x^i\}_i\sim p(x\vert \theta)$$ are i.i.d. 
 
-We need to somehow relate $$(\hat \theta-\theta)^2$$ to the derivatives of $$\log p(x|w=\theta)$$ with respect to $$w$$. The way to do so is Taylor expansion! To get the second derivative, we Taylor expand the (empirical estimate of the) first derivative of the log likelihood function, which we call $$U(w)=\frac{1}{N}\sum_{i=1}^{N}\frac{\partial \log p(x^i|w)}{\partial w},$$ at the true parameter $$\theta$$:
+We need to somehow relate $$(\hat \theta-\theta)^2$$ to the derivatives of $$\log p(x\vert w=\theta)$$ with respect to $$w$$. The way to do so is Taylor expansion! To get the second derivative, we Taylor expand the (empirical estimate of the) first derivative of the log likelihood function, which we call $$U(w)=\frac{1}{N}\sum_{i=1}^{N}\frac{\partial \log p(x^i\vert w)}{\partial w},$$ at the true parameter $$\theta$$:
 
 $$
 U(\hat\theta)=U(\theta)+(\hat \theta-\theta)U'(\theta)
@@ -33,7 +33,7 @@ $$
 (\hat \theta-\theta) = -\frac{U(\theta)}{U'(\theta)}
 $$
 
-Note that as $$N\rightarrow \infty$$, $$U'(\theta)=\frac{1}{N}\sum_{i=1}^{N}\frac{\partial^2 \log p(x^i|w)}{\partial w^2}\rightarrow-I(\theta),$$  by the strong law of large numbers. Thus we replace (!) $$U'(\theta)$$ in the above, square both sides and take the expectation:
+Note that as $$N\rightarrow \infty$$, $$U'(\theta)=\frac{1}{N}\sum_{i=1}^{N}\frac{\partial^2 \log p(x^i\vert w)}{\partial w^2}\rightarrow-I(\theta),$$  by the strong law of large numbers. Thus we replace (!) $$U'(\theta)$$ in the above, square both sides and take the expectation:
 
 $$
 \mathbb E[(\hat\theta-\theta)^2] = \frac{\mathbb E[U(\theta)^2]}{I^2(\theta)}.
@@ -41,10 +41,10 @@ $$
 
 Expand the numerator:
 
-$$\mathbb E[U(\theta)^2]=1/N^2(\sum_i\mathbb E(\frac{\partial \log p(x^i|w=\theta)}{\partial w})^2+\sum_{i,j}\mathbb E[\frac{\partial \log p(x^i|w=\theta)}{\partial w}] \mathbb E[\frac{\partial \log p(x^j|w=\theta)}{\partial w}]).$$
+$$\mathbb E[U(\theta)^2]=1/N^2(\sum_i\mathbb E(\frac{\partial \log p(x^i\vert w=\theta)}{\partial w})^2+\sum_{i,j}\mathbb E[\frac{\partial \log p(x^i\vert w=\theta)}{\partial w}] \mathbb E[\frac{\partial \log p(x^j\vert w=\theta)}{\partial w}]).$$
 
 The cross terms are 0, since the expectation of the derivative of the log likelihood is 0 under the true parameter. The square terms:  
-$$\mathbb E[(\frac{\partial \log p(x^i|w=\theta)}{\partial w})^2] = I(\theta)$$ (this is a common form of fisher information other than the second derivative form. The equivalence of two forms is straightforward to show using integration by part and is omitted here). 
+$$\mathbb E[(\frac{\partial \log p(x^i\vert w=\theta)}{\partial w})^2] = I(\theta)$$ (this is a common form of fisher information other than the second derivative form. The equivalence of two forms is straightforward to show using integration by part and is omitted here). 
 
 Together, we have:
 
@@ -54,7 +54,7 @@ $$
 
 # Confusion and correction
 
-❗One thing that bugged me was when we replace the $$U'(\theta)$$ with its asymptotic value under large sample size. In calculations involving random variables, when can we replace variables with what they converge to? For instance, why can’t we replace $$U(\theta)$$ with $$\mathbb E[\partial \log p(x|w=\theta)/\partial w],$$ which would be 0? 
+❗One thing that bugged me was when we replace the $$U'(\theta)$$ with its asymptotic value under large sample size. In calculations involving random variables, when can we replace variables with what they converge to? For instance, why can’t we replace $$U(\theta)$$ with $$\mathbb E[\partial \log p(x\vert w=\theta)/\partial w],$$ which would be 0? 
 
 This confusion comes from treating the problem in a heuristic way, and reason about the variance of the estimator in the large sample case, rather than reason about the distribution of the estimator itself. More rigorously, the claim is actually: $$\sqrt{N}(\hat \theta-\theta) \rightarrow N(0,1/I(\theta))$$, where the convergence is in distribution (called ***asymptotic normality***). (convergence in distribution: probability statements about a random variable can be approximated using the asymptotic distribution. It’s the probability statements that are being approximated, not the random variable itself!)
 
