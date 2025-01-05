@@ -5,7 +5,7 @@ date: 2024-06-30
 categories: mathematical details
 ---
 
-# Intro
+# Introduction
 
 While reading papers about Fisher information, I came across this basic relationship between the Fisher information and the variance of the maximum likelihood estimator (for large sample size), which I found amazing:
 
