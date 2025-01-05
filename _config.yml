@@ -23,6 +23,8 @@ kramdown:
     displaymath_delimiters:
       - '$$'
       - '$$'
+  syntax_highlighter_opts:
+    disable_tables: true
 
 
 
