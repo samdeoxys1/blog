@@ -36,6 +36,8 @@ defaults:
       layout: "single"
 
 
+url: "https://samdeoxys1.github.io"
+baseurl: "/blog"
 
 # # Optional but recommended
 # paginate: 5
