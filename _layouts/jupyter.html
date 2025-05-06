@@ -29,6 +29,14 @@ layout: default
 </article>
 
 <style>
+  /* Container for better reading comfort */
+  #jupyter-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    line-height: 1.6;
+  }
+  
   /* Simple styling for Jupyter notebook content */
   #jupyter-content pre {
     padding: 1rem;
@@ -41,6 +49,11 @@ layout: default
   
   #jupyter-content code {
     font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  }
+  
+  /* Better paragraphs */
+  #jupyter-content p {
+    margin-bottom: 1.2em;
   }
   
   /* Styling for indented output blocks */
@@ -75,6 +88,15 @@ layout: default
   /* Output wrapper */
   .output-wrapper {
     margin: 0.5rem 0;
+  }
+  
+  /* Make images nicer */
+  #jupyter-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 4px;
   }
 </style>
 
