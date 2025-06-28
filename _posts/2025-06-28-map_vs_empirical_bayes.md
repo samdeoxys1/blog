@@ -49,27 +49,34 @@ The log joint is given by (ignoring the $\pi$ terms):
 $$
 \begin{equation}
 L(w,\sigma)=\log p(y,w|x,\sigma,\delta)\sim -\frac{\sum(y_i-wx_i)^2}{2\delta^2}-\log|\delta| - \frac{w^2}{2\delta^2}-\log |\sigma|
-\begin{equation}
+\end{equation}
 $$
+
 Perform maximum likelihood with respect to $\sigma$, we get the gradient:
+
 $$
 \begin{equation}
 \frac{\partial}{\partial \sigma^2}L(w,\sigma)=\frac{w^2}{2\sigma^4}-\frac{1}{2\sigma^2}. \label{dsigma}
 \end{equation}
 $$
+
 Set this to $0$, we get a rather simple formula: 
+
 $$
 \begin{equation}
 \hat \sigma^2=w^2 \label{sigma_hat}
 \end{equation}
 $$
+
 This is saying at the stationary point of $L$, we have the variance equal the square of the parameter. This might give a tempting way of choosing the prior variance, **however, we have not verified that the stationary point is a maximum**! In fact, if we check by taking the derivative of eq. $\ref{dsigma}$, we get:
+
 $$
 \begin{aligned}
 \frac{\partial^2}{(\partial \sigma^2)^2}L &=-\frac{w^2}{(\sigma^2)^3}+\frac{1}{2(\sigma^2)^2}\\
 &=\frac{1}{2(\sigma^2)^2}>0. &(\text{plug in eq. \ref{sigma_hat}})
 \end{aligned}
 $$
+
 So the second derivative of the objective with respect to the prior variance $\sigma^2$ is positive at the stationary point (think of a picture of curving up like a smile). Having a single positive diagonal entry rules out the case where all eigenvalues of the hessian are negative, and thus the stationary points cannot be maxima!    
 
 ### The intuition explanation
