@@ -2,7 +2,7 @@
 layout: single
 title: "How not to learn hyperparameters"
 date: 2025-06-28
-categories: mathematical think-throughs
+categories: mathematical_think_throughs
 ---
 
 The most prevelant way of learning the parameters of a probabilistic model is to do maximum likelihood estimation:
