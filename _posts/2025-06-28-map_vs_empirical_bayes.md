@@ -8,16 +8,22 @@ categories: mathematical think-throughs
 # Setup
 
 The most prevelant way of learning the parameters of a probabilistic model is to do maximum likelihood estimation:
+
 $$
 \begin{aligned}
 \hat w=\text{argmax }p(y|w).
 \end{aligned}
 $$
+
 If in addition, we put a prior on $w$ as regularization, the estimator becomes the *maximum a posteriori* (MAP) estimator:
+
 $$
+\begin{aligned}
 \hat w=\text{argmax } L(w,\sigma)\\
 L(w,\sigma)=p(y,w|\sigma)=p(y|w)+p(w|\sigma),
+\end{aligned}
 $$
+
 where $\sigma$ is the hyperparameter. For instance, in linear regression, we can put a gaussian prior $w\sim Norm(0,\sigma^2)$ to encourage a small 2-norm. Here, we assume $\sigma^2$ is known. 
 
 But I don't like arbitrary quantities in a model. Can we learn this?
