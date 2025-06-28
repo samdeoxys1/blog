@@ -36,18 +36,22 @@ But both seem more complicated than an obvious alternative. In the spirit of max
 
 Let's consider the example of a 1-D linear regression where:
 $$
+\begin{align}
 y= wx+\epsilon\\
 w\sim Norm(0,\sigma^2) & \text{: parameter}\\
 \epsilon\sim Norm(0,\delta^2). & \text{: noise, assume to be known}
+\begin{align}
 $$
 
 ### The effortful explanation (skip if you don't like erivations)
 
 The log joint is given by (ignoring the $\pi$ terms):
 $$
+\begin{equation}
 L(w,\sigma)=\log p(y,w|x,\sigma,\delta)\sim -\frac{\sum(y_i-wx_i)^2}{2\delta^2}-\log|\delta| - \frac{w^2}{2\delta^2}-\log |\sigma|
+\begin{equation}
 $$
-The perform maximum likelihood with respect to $\sigma$, we get the gradient:
+Perform maximum likelihood with respect to $\sigma$, we get the gradient:
 $$
 \begin{equation}
 \frac{\partial}{\partial \sigma^2}L(w,\sigma)=\frac{w^2}{2\sigma^4}-\frac{1}{2\sigma^2}. \label{dsigma}
