@@ -9,7 +9,9 @@ categories: mathematical think-throughs
 
 The most prevelant way of learning the parameters of a probabilistic model is to do maximum likelihood estimation:
 $$
+\begin{aligned}
 \hat w=\text{argmax }p(y|w).
+\end{aligned}
 $$
 If in addition, we put a prior on $w$ as regularization, the estimator becomes the *maximum a posteriori* (MAP) estimator:
 $$
