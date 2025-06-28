@@ -10,18 +10,18 @@ categories: mathematical think-throughs
 The most prevelant way of learning the parameters of a probabilistic model is to do maximum likelihood estimation:
 
 $$
-\begin{aligned}
+\begin{equation}
 \hat w=\text{argmax }p(y|w).
-\end{aligned}
+\end{equation}
 $$
 
 If in addition, we put a prior on $w$ as regularization, the estimator becomes the *maximum a posteriori* (MAP) estimator:
 
 $$
-\begin{aligned}
-\hat w=\text{argmax } L(w,\sigma)\\
-L(w,\sigma)=p(y,w|\sigma)=p(y|w)+p(w|\sigma),
-\end{aligned}
+\begin{align}
+\hat w&=\text{argmax } L(w,\sigma) \nonumber \\
+L(w,\sigma)&=p(y,w|\sigma)=p(y|w)+p(w|\sigma),
+\end{align}
 $$
 
 where $\sigma$ is the hyperparameter. For instance, in linear regression, we can put a gaussian prior $w\sim Norm(0,\sigma^2)$ to encourage a small 2-norm. Here, we assume $\sigma^2$ is known. 
@@ -51,16 +51,22 @@ L(w,\sigma)=\log p(y,w|x,\sigma,\delta)\sim -\frac{\sum(y_i-wx_i)^2}{2\delta^2}-
 $$
 The perform maximum likelihood with respect to $\sigma$, we get the gradient:
 $$
+\begin{equation}
 \frac{\partial}{\partial \sigma^2}L(w,\sigma)=\frac{w^2}{2\sigma^4}-\frac{1}{2\sigma^2}. \label{dsigma}
+\end{equation}
 $$
 Set this to $0$, we get a rather simple formula: 
 $$
+\begin{equation}
 \hat \sigma^2=w^2 \label{sigma_hat}
+\end{equation}
 $$
 This is saying at the stationary point of $L$, we have the variance equal the square of the parameter. This might give a tempting way of choosing the prior variance, **however, we have not verified that the stationary point is a maximum**! In fact, if we check by taking the derivative of eq. $\ref{dsigma}$, we get:
 $$
-\frac{\partial^2}{(\partial \sigma^2)^2}L =-\frac{w^2}{(\sigma^2)^3}+\frac{1}{2(\sigma^2)^2}\\
-=\frac{1}{2(\sigma^2)^2}>0. &(\text{plug in eq. \ref{sigma_hat}})
+\begin{aligned}
+\frac{\partial^2}{(\partial \sigma^2)^2}L &=-\frac{w^2}{(\sigma^2)^3}+\frac{1}{2(\sigma^2)^2}\\
+&=\frac{1}{2(\sigma^2)^2}>0. &(\text{plug in eq. \ref{sigma_hat}})
+\end{aligned}
 $$
 So the second derivative of the objective with respect to the prior variance $\sigma^2$ is positive at the stationary point (think of a picture of curving up like a smile). Having a single positive diagonal entry rules out the case where all eigenvalues of the hessian are negative, and thus the stationary points cannot be maxima!    
 
