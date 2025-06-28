@@ -40,7 +40,7 @@ $$
 y= wx+\epsilon\\
 w\sim Norm(0,\sigma^2) & \text{: parameter}\\
 \epsilon\sim Norm(0,\delta^2). & \text{: noise, assume to be known}
-\begin{align}
+\end{align}
 $$
 
 ### The effortful explanation (skip if you don't like erivations)
