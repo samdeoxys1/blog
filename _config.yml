@@ -6,7 +6,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-include-cache
 
-title: "Sam's Blog"
+title: "Sam Zheng's Blog"
 description: "Thoughts on Philosophy, Neuroscience, and Math"
 author:
   name: "Zheyang (Sam) Zheng"
