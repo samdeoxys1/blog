@@ -6,11 +6,27 @@ plugins:
   - jekyll-seo-tag
   - jekyll-include-cache
 
+# Enable search
+search: true
+search_full_content: true
+search_provider: lunr
+
 title: "Sam Zheng's Blog"
 description: "Thoughts on Philosophy, Neuroscience, and Math"
+locale: "en-US"
 author:
   name: "Zheyang (Sam) Zheng"
+  bio: "PhD student in computational neuroscience at NYU"
   email: "samzhenguchi@gmail.com"
+  location: "New York, NY"
+
+# SEO settings
+og_image: # Add path to an image for social media previews
+twitter:
+  username: # Add your Twitter handle if you have one
+
+# Analytics (optional but helpful for tracking)
+# google_analytics: # Add your GA tracking ID if you have one
 
 markdown: kramdown
 kramdown:
