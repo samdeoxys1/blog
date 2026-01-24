@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "How GPT fixed a broken heart"
+title: "How GPT fixed my broken heart"
 date: 2026-01-12
 categories: life
 ---
