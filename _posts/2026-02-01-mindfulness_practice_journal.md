@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Mindfulness practice journal - 1 - The "soft" treatment of my meditation addiction"
+title: "Mindfulness practice journal - 1 - The *soft* treatment of my meditation addiction"
 date: 2026-02-01
 categories: life
 ---
@@ -21,17 +21,23 @@ Being in the present moment in daily life makes me feel at peace. That what I am
 
 It also helped with a recurring problem that I could not solve even when I did the sitting meditation consistently, i.e. meals always felt like a boring waste of time, and should be accompanied by some mindless podcast listening, but then listening to podcast during meals was the slippery slope that led to less overall mindfulness. So far I was surprised to find being mindful at meals became easy. Perhaps because the more explicit emphasize on continuous awareness throughout the day, meal became less like an episode to get over with, but just another part of this mindful stream, with some extra novelty because I get to explore the taste modality.   
 
+All the above is not to say don't do Goenka-style meditation. Without those long sitting training, I would not have been able to sustain my awareness long enough to do this type of daily practices. To use a machine learning analogy: the long sitting is like pre-training. It gives the mind the "muscle" to be able to focus and redirect after realizing the distraction. The continuous awareness during the day is like fine-tuning, to put the muscle to use in unfamiliar positions (borrowing my friend's analogy). It could be the muscle is strong enough, but unless it's fine-tuned in the new situation, it would not be able to release its potential.
+
 # Simple practices
-- Walking, standing, sitting, lying, what state are you in? What's your posture? What else are you doing right now?
-- Are you present, or distracted? 
-- Are you relaxed, or tense? 
+- Walking, standing, sitting, lying, what physical state are you in? What's your posture? What else are you doing right now?
+- Are you present, or distracted?
+- What is grabbing your attention?  
+- Are you relaxed, or tense?
 - If the mental state is undesirable, simply be aware without judgment. If there is judgment, be aware of that judgement. 
+- Do you like, dislike, or neutral about what you are experiencing?
+- When did your awareness of one thing starts? When does it disappear and shift to something else?
 - When doing chores, eating, bathroom, pay attention to the present sensations and perceptions (including what you see, hear and smell!), as well as whether the mind is drifting away.
-- The questions are meant to be a guide. You should not do a moment-to-moment mental Q & A. 
+- The questions are meant to be a guide. You should not do a moment-to-moment mental Q & A.
 - Pay special attention to the transition of actions
 - Remember the goal is to appreciate the arising and passing away of elements of experiences.
 
 # Some future ideas to expand upon
 - Flow and upaya (skillful means)
 - Awareness and wisdom
+  
 
