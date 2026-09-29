@@ -3,7 +3,6 @@ layout: single
 title: "From Langevin to Fokker–Planck"
 date: 2026-09-28
 categories: mathematical_think_throughs
-tags: [math, stochastic-dynamics, probability]
 permalink: /from-langevin-to-fokker-planck/
 ---
 
@@ -27,13 +26,13 @@ $$
 where the next time step probability can be given by:
 
 $$
-p(x,t+\Delta t):=p_{t+\Delta t}(x)=\int p_{\Delta t}(x|y)p_t(y)dy.
+p(x,t+\Delta t):=p_{t+\Delta t}(x)=\int p_{\Delta t}(x\vert y)p_t(y)dy.
 $$
 
-The transition probability $$p_{\Delta t}(x|y)$$ here is given by the SDE and is approximately Gaussian (think of the SDE as a discrete markov chain, the mean of next step is current state plus the deterministic drift, and the variance is the diffusion coefficient $$g$$ squared times $$\Delta t$$)[^ito-convention]:
+The transition probability $$p_{\Delta t}(x\vert y)$$ here is given by the SDE and is approximately Gaussian (think of the SDE as a discrete markov chain, the mean of next step is current state plus the deterministic drift, and the variance is the diffusion coefficient $$g$$ squared times $$\Delta t$$)[^ito-convention]:
 
 $$
-l:=p_{\Delta t}(x|y)\propto e^{\frac{-(x-y-f(y,t)\Delta t)^2}{2g(y,t)^2\Delta t}}
+l:=p_{\Delta t}(x\vert y)\propto e^{\frac{-(x-y-f(y,t)\Delta t)^2}{2g(y,t)^2\Delta t}}
 $$
 
 
@@ -51,7 +50,7 @@ So instead, we expand around the displacement $$s=x-y$$. To do so we need help f
 The next time step probability is then given by:
 
 $$
-p_{t+\Delta t}(x)=\int\int p_{\Delta t}(y+s|y)p_t(y)\delta(x-y-s) dsdy.
+p_{t+\Delta t}(x)=\int\int p_{\Delta t}(y+s\vert y)p_t(y)\delta(x-y-s) dsdy.
 $$
 
 We can Taylor expand the delta function around the displacement $$s=0$$ (in the distributional sense, i.e. the effect is considered when integrated with smooth function, not evaluated at each point):
@@ -65,8 +64,8 @@ Plug this back in into the double integral, the first term becomes:
 
 $$
 \begin{aligned}
-\int(\int p_{\Delta t}(y+s|y)p_t(y)\delta(y-x)ds)dy
-&=\int(\int p_{\Delta t}(y+s|y)ds)p_t(y)\delta(y-x)dy\\
+\int(\int p_{\Delta t}(y+s\vert y)p_t(y)\delta(y-x)ds)dy
+&=\int(\int p_{\Delta t}(y+s\vert y)ds)p_t(y)\delta(y-x)dy\\
 &=\int p_t(y)\delta(y-x)dy\\
 &=p_t(x)
 \end{aligned}
@@ -77,7 +76,7 @@ The second term becomes:
 
 $$
 \begin{aligned}
-\int\int p_{\Delta t}(y+s|y)p_t(y)\delta'(x-y)sdsdy
+\int\int p_{\Delta t}(y+s\vert y)p_t(y)\delta'(x-y)sdsdy
 &=\int(f(y,t)\Delta tp_t(y))\delta'(x-y)dy\\
 &=\frac{\partial(f(x,t)p(x))}{\partial x}\Delta t
 \end{aligned}
